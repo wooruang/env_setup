@@ -67,7 +67,7 @@ $ bash vue/install_vue-cli.sh
 <img src="https://simulatedgreg.gitbooks.io/electron-vue/content/images/logo.png" width="300"/>
 
 ```shell
-$ bash electron/start_electron-vue_project.sh ttt
+$ bash electron/start_electron-vue_project.sh {PROJECT_NAME}
 
 # Example.
 $ bash electron/start_electron-vue_project.sh ttt
