@@ -5,7 +5,6 @@ SUPPORTED=0
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # ...
     OS_VER=`awk -F= '/^NAME/{print $2}' /etc/os-release`
-    echo $OS_VER
     if [[ "$OS_VER" == '"Ubuntu"' ]]; then
         SUPPORTED=1
         /usr/bin/env bash $(dirname $0)/ubuntu/install_yarn_for_ubuntu.sh
