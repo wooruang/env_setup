@@ -27,6 +27,7 @@ $ bash pyenv/make_new_virtualenv.sh 3.7.0 test-env
 ```
 
 ## Setup Django
+<img src="https://www.djangoproject.com/m/img/logos/django-logo-positive.svg" width="200"/>
 
 ### Install Django (If Pyenv, python and virtualenv are not exist, It will install them.)
 ```shell
@@ -42,4 +43,11 @@ $ bash django/start_django_project.sh {PYTHON_VERSION} {VIRTUALENV_NAME} {PROJEC
 
 # example
 $ bash django/start_django_project.sh 3.7.0 test-env test_proj test_app
+```
+
+## Setup Node with Yarn
+
+### Install yarn
+```shell
+$ bash node/install_yarn.sh 
 ```
