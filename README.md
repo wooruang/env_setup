@@ -117,3 +117,12 @@ Next Steps:
 
 - Done Creating a electron-vue project(ttt) ...
 ```
+
+## Setup Bazel
+<img src="https://www.bazel.build/images/bazel-icon.svg" width="150"/>
+
+### Install Bazel (Support only linux and MacOS)
+```shell
+$ bash bazel/install-bazel.sh 
+```
+
