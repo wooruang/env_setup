@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  che:
+    image: eclipse/che-server:6.19.0
+    ports:
+      - 9999:8080
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/bogonets/che:/data
+    container_name: che
+
+
