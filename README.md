@@ -3,7 +3,7 @@ Automate development environment setting.
 
 # How to setup
 
-## Setup Pyenv
+## * **Setup Pyenv**
 
 ### Install pyenv (Only will install Pyenv.)
 ```shell
@@ -26,7 +26,9 @@ $ bash pyenv/make_new_virtualenv.sh {PYTHON_VERSION} {VIRTUALENV_NAME}
 $ bash pyenv/make_new_virtualenv.sh 3.7.0 test-env
 ```
 
-## Setup Django
+---
+
+## * **Setup Django**
 <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="300"/>
 
 ### Install Django (If Pyenv, python and virtualenv are not exist, It will install them.)
@@ -45,14 +47,18 @@ $ bash django/start_django_project.sh {PYTHON_VERSION} {VIRTUALENV_NAME} {PROJEC
 $ bash django/start_django_project.sh 3.7.0 test-env test_proj test_app
 ```
 
-## Setup Node with Yarn
+---
+
+## * **Setup Node with Yarn**
 
 ### Install yarn
 ```shell
 $ bash node/install_yarn.sh 
 ```
 
-## Setup Vuejs
+---
+
+## * **Setup Vuejs**
 <img src="https://vuejs.org/images/logo.png" width="100"/>
 
 ### Install vue-cli
@@ -60,7 +66,9 @@ $ bash node/install_yarn.sh
 $ bash vue/install_vue-cli.sh 
 ```
 
-## Setup Electron
+---
+
+## * **Setup Electron**
 <img src="https://camo.githubusercontent.com/627c774e3070482b180c3abd858ef2145d46303b/68747470733a2f2f656c656374726f6e6a732e6f72672f696d616765732f656c656374726f6e2d6c6f676f2e737667" width="300"/>
 
 ### Setup Electron-vue
@@ -118,7 +126,9 @@ Next Steps:
 - Done Creating a electron-vue project(ttt) ...
 ```
 
-## Setup Bazel
+---
+
+## * **Setup Bazel**
 <img src="https://www.bazel.build/images/bazel-icon.svg" width="150"/>
 
 ### Install Bazel (Support only linux and MacOS)
@@ -126,3 +136,13 @@ Next Steps:
 $ bash bazel/install-bazel.sh 
 ```
 
+---
+
+## * **Setup Eclipse Che**
+<img src="https://www.eclipse.org/che/images/logo-eclipseche.svg" height="100">
+
+### Install Che on docker
+```shell
+$ cd che/
+$ docker-compose up -d
+```
