@@ -2,10 +2,10 @@
 
 bazel --version
 
-# if [[ $? -eq 0 ]]; then
-#     echo "bazel is already exist!"
-#     exit 1
-# fi
+if [[ $? -eq 0 ]]; then
+    echo "bazel is already exist!"
+    exit 1
+fi
 
 BAZEL_VERSION="0.26.1"
 # BAZEL_VERSION="1.1.0"
