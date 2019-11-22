@@ -2,12 +2,13 @@
 
 bazel --version
 
-if [[ $? -eq 0 ]]; then
-    echo "bazel is already exist!"
-    exit 1
-fi
+# if [[ $? -eq 0 ]]; then
+#     echo "bazel is already exist!"
+#     exit 1
+# fi
 
-BAZEL_VERSION="1.1.0"
+BAZEL_VERSION="0.26.1"
+# BAZEL_VERSION="1.1.0"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     BAZEL_INSTALLER="bazel-$BAZEL_VERSION-installer-linux-x86_64.sh"
@@ -25,8 +26,10 @@ fi
 BAZEL_INSTALLER_URL="https://github.com/bazelbuild/bazel/releases/download/$BAZEL_VERSION/$BAZEL_INSTALLER"
 
 # Download bazel.
+wget -c $BAZEL_INSTALLER_URL
+
 if [[ ! -f $BAZEL_INSTALLER ]]; then
-    wget $BAZEL_INSTALLER_URL
+    wget -c $BAZEL_INSTALLER_URL
 else
     echo "Already exist $BAZEL_INSTALLER"
 fi
