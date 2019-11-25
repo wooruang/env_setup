@@ -1,0 +1,19 @@
+[Unit]
+Description=Code Server IDE
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+Environment="PASSWORD=$PASSWORD"
+WorkingDirectory=$HOME
+Restart=on-failure
+RestartSec=10
+
+ExecStart=$HOME/Application/code-server2.1692-vsc1.39.2-linux-x86_64/code-server --port 8888
+
+StandardOutput=file:/var/log/code-server-output.log
+StandardError=file:/var/log/code-server-error.log
+
+[Install]
+WantedBy=multi-user.target

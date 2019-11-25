@@ -146,3 +146,25 @@ $ bash bazel/install-bazel.sh
 $ cd che/
 $ docker-compose up -d
 ```
+
+---
+
+## * **Setup Code Server IDE**
+<img src="https://pbs.twimg.com/profile_images/1103017383919341569/GOGYclqO_400x400.jpg" height="100">
+
+https://github.com/cdr/code-server.git
+
+### Install Code Server IDE
+```shell
+$ bash install-code-server.sh
+```
+
+### Register Code Server IDE for Ubuntu
+```shell
+$ cd code-server
+
+Change `$HOME` to your home path or your code-server's path in code-server/code-server.service
+and then Change `$PASSWORD` to your password in code-server/code-server.service
+
+$ bash register-code-server.sh
+```
