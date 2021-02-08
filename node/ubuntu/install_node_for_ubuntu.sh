@@ -19,6 +19,9 @@ if [[ "$UBUNTU_VER" == "14.04" ]]; then
 elif [[ "$UBUNTU_VER" == "18.04" ]]; then
     curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
     sudo apt-get install -y nodejs
+elif [[ "$UBUNTU_VER" == "20.04" ]]; then
+    curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+    sudo apt-get install -y nodejs
 fi
 
 echo "Done installing node ..."
