@@ -18,7 +18,7 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $BASHFILE
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> $BASHFILE
 
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> $BASHFILE
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init --path)"\n  eval "$(pyenv init -)"\nfi' >> $BASHFILE
 
 # Install for python dependencies.
 echo "- Installing for python dependencies ..."
@@ -61,10 +61,14 @@ if [[ $SUPPORTED -eq 0 ]]; then
     exit 1
 fi
 
+source $BASHFILE
+
 # Install a virtualenv plugin.
 echo "- Installing virtualenv plugin ..."
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 echo 'eval "$(pyenv virtualenv-init -)"' >> $BASHFILE
+
+source $BASHFILE
 
 echo "- Done installing pyenv ..."
 
