@@ -13,6 +13,8 @@ fi
 PARENT_DIR=$(dirname $0)
 /usr/bin/env bash $PARENT_DIR/pyenv_install.sh
 
+. $HOME/.bash_profile
+
 # Install python.
 SUPPORTED=0
 echo "- Installing python $PY_VER ($OSTYPE)..."

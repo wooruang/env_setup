@@ -10,9 +10,13 @@ then
     exit 1
 fi
 
+. $HOME/.bash_profile
+
 # Install if python does not exist.
 PARENT_DIR=$(dirname $0)
 /usr/bin/env bash $PARENT_DIR/install_python.sh $PY_VER
+
+. $HOME/.bash_profile
 
 # Make new virtualenv.
 SUPPORTED=0

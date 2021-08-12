@@ -8,7 +8,7 @@ then
 fi
 
 # For ubuntu desktop.
-BASHFILE=~/.bashrc
+BASHFILE=$HOME/.bash_profile
 
 # Install pyenv
 echo "- Installing pyenv ..."
@@ -61,14 +61,14 @@ if [[ $SUPPORTED -eq 0 ]]; then
     exit 1
 fi
 
-source $BASHFILE
+. $BASHFILE
 
 # Install a virtualenv plugin.
 echo "- Installing virtualenv plugin ..."
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 echo 'eval "$(pyenv virtualenv-init -)"' >> $BASHFILE
 
-source $BASHFILE
+. $BASHFILE
 
 echo "- Done installing pyenv ..."
 
